@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.pkl
+*.h5
+*.hdf5
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# VSCode/IDEA/PyCharm
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# 环境
+.env
+.venv
+env/
+venv/
+
+# 数据与模型
+checkpoints/
+results/
+result.txt
+*.npy
+*.npz
+*.csv
+*.pdf
+
+# 日志
+*.log
+
+# 备份
+-backup/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 其他
+*.bak 
