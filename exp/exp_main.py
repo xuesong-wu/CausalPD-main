@@ -36,14 +36,14 @@ class Exp_Main(Exp_Basic):
             model = nn.DataParallel(model, device_ids=self.args.device_ids)
 
         print(f"=== Model: {self.args.model} ===")
-        # total_params = 0
-        # for name, param in model.named_parameters():
-        #     num = param.numel()
-        #     total_params += num
-        #     shape_str = str(tuple(param.size()))
-        #     print(f"{name:50}  shape={shape_str:15}  params={num}")
-        # print(f"{'Total parameters':50}  {total_params}\n")
-        # print(f"Approx. model size (float32): {total_params * 4 / (1024 ** 2):.2f} MB")
+        total_params = 0
+        for name, param in model.named_parameters():
+            num = param.numel()
+            total_params += num
+            shape_str = str(tuple(param.size()))
+            print(f"{name:50}  shape={shape_str:15}  params={num}")
+        print(f"{'Total parameters':50}  {total_params}\n")
+        print(f"Approx. model size (float32): {total_params * 4 / (1024 ** 2):.2f} MB")
 
         return model
 
@@ -205,7 +205,7 @@ class Exp_Main(Exp_Basic):
                     loss = criterion(outputs, batch_y)
                     train_loss.append(loss.item())
 
-                if (i + 1) % 100 == 0:
+                if (i + 1) % 10 == 0:
                     print("\titers: {0}, epoch: {1} | loss: {2:.7f}".format(i + 1, epoch + 1, loss.item()))
                     speed = (time.time() - time_now) / iter_count
                     left_time = speed * ((self.args.train_epochs - epoch) * train_steps - i)

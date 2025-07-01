@@ -20,10 +20,10 @@ if __name__ == '__main__':
 
     # data loader
     parser.add_argument('--data', type=str, default='train', help='dataset type')
-    parser.add_argument('--root_path', type=str, default='./data/GridSZ/', help='root path of the data file')
+    parser.add_argument('--root_path', type=str, default='./data/Shanghai/', help='root path of the data file, options: [GridSZ, SegmentSZ, Shanghai]')
     parser.add_argument('--data_path', type=str, default='pavement_distress.npy', help='data file')
     parser.add_argument('--ext_path', type=str, default='ext.csv', help='data file')
-    parser.add_argument('--meta_dim', type=int, default=24, help='dimension of static spatial features, set to 0 to disable static feature loading')
+    parser.add_argument('--meta_dim', type=int, default=0, help='dimension of static spatial features, set to 0 to disable static feature loading')
     parser.add_argument('--features', type=str, default='M',
                         help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
     parser.add_argument('--target', type=str, default='OT', help='target feature in S or MS task')
@@ -69,7 +69,7 @@ if __name__ == '__main__':
     parser.add_argument('--attention_threshold', type=float, default=0.5, help='threshold for separating causal and non-causal patches')
     parser.add_argument('--entropy_weight', type=float, default=0.05, help='weight for entropy regularization')
     parser.add_argument('--consistency_weight', type=float, default=0.1, help='weight for consistency loss')
-    parser.add_argument('--K', type=int, default=3, help='number of intervention samples')
+    parser.add_argument('--K', type=int, default=4, help='number of intervention samples')
     parser.add_argument('--intervention_prob', type=float, default=0.7, help='probability of applying intervention in each batch')
     parser.add_argument('--intervention_lr_scale', type=float, default=0.1, help='learning rate scale for intervention training')
     parser.add_argument('--intervention_lr_decay', type=float, default=0.95, help='learning rate decay factor for intervention training')
@@ -78,8 +78,8 @@ if __name__ == '__main__':
     parser.add_argument('--num_workers', type=int, default=0, help='data loader num workers')
     parser.add_argument('--itr', type=int, default=1, help='experiments times')
     parser.add_argument('--train_epochs', type=int, default=20, help='train epochs')
-    parser.add_argument('--batch_size', type=int, default=16, help='batch size of train input data')
-    parser.add_argument('--patience', type=int, default=5, help='early stopping patience')
+    parser.add_argument('--batch_size', type=int, default=4, help='batch size of train input data')
+    parser.add_argument('--patience', type=int, default=3, help='early stopping patience')
     parser.add_argument('--learning_rate', type=float, default=0.001, help='optimizer learning rate')
     parser.add_argument('--des', type=str, default='test', help='exp description')
     parser.add_argument('--loss', type=str, default='mse', help='loss function')

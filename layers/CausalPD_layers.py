@@ -4,7 +4,6 @@ import torch
 from torch import nn
 import math
 import torch.nn.functional as F
-import pywt
 
 class Transpose(nn.Module):
     def __init__(self, *dims, contiguous=False): 

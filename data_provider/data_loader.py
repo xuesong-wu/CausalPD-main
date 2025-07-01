@@ -88,7 +88,11 @@ class Dataset_Train(Dataset):
             df_ext = pd.read_csv(os.path.join(self.root_path, "ext.csv"))
         elif self.root_path == "./data/Shanghai/":
             df_ext = np.load(os.path.join(self.root_path, "ext.npy"))
-
+            df_ext = df_ext[:, 0, 0:4]
+            df_ext = pd.DataFrame(df_ext)
+            dates = pd.date_range(start='2021-01-01 00:00:00', periods=df_ext.shape[0], freq='D')
+            df_ext['date'] = dates
+            df_ext['date'] = df_ext['date'].dt.strftime('%Y-%m-%d %H:%M:%S')
         # Load static meta features if enabled
         if self.use_meta:
             df_meta = pd.read_csv(os.path.join(self.root_path, self.meta_path))
