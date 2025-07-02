@@ -6,12 +6,10 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Data Preparation](#data-preparation)
-- [Training & Evaluation](#training--evaluation)
 - [Results](#results)
 - [Contributing](#contributing)
 - [License](#license)
@@ -23,14 +21,6 @@
 
 **CausalPD_main** is a deep learning framework for joint causal discovery and intervention on large-scale pavement distress distribution data. It provides tools for data loading, model training, evaluation, and visualization, aiming to facilitate research in spatio-temporal causal inference and pavement management.
 
----
-
-## Features
-
-- End-to-end pipeline for causal discovery and intervention
-- Modular code structure for easy extension
-- Support for multiple datasets and flexible configuration
-- Visualization tools for results and model analysis
 
 ---
 
@@ -122,10 +112,6 @@ CausalPD_main/
 - Download datasets:
   - [GridSZ (Google Drive)](https://drive.google.com/file/d/1I-TudjLAI0siukg-1UgPC798SkCA2auG/view?usp=sharing)
   - [SegmentSZ (Google Drive)](https://drive.google.com/file/d/1PpAzvXrrxbBK5PyAO033B748CnNa21ae/view?usp=sharing)
-
----
-
-## Training & Evaluation
 
 
 ---
