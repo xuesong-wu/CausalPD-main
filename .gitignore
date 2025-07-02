@@ -44,4 +44,7 @@ result.txt
 Thumbs.db
 
 # 其他
-*.bak 
+*.bak
+
+wandb/
+sweep_config.yaml 

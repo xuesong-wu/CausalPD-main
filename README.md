@@ -127,15 +127,6 @@ CausalPD_main/
 
 ## Training & Evaluation
 
-- All training and evaluation scripts are managed via `run_Exp.py`.
-- Example command:
-  ```bash
-  python run_Exp.py --is_training 1 --model_id test --model CausalPD --data train --root_path ./data/GridSZ/ --data_path pavement_distress.npy
-  ```
-- For more configuration options, use:
-  ```bash
-  python run_Exp.py --help
-  ```
 
 ---
 
