@@ -226,6 +226,14 @@ class Exp_Main(Exp_Basic):
             vali_loss = self.vali(vali_data, vali_loader, criterion)
             test_loss = self.vali(test_data, test_loader, criterion)
 
+# wandb
+            # wandb.log({
+            #     "epoch": epoch,
+            #     "train_loss": train_loss,
+            #     "val_loss": vali_loss,
+            #     "test_loss": test_loss,
+            # })
+
             print("Epoch: {0}, Steps: {1} | Train Loss: {2:.7f} Vali Loss: {3:.7f} Test Loss: {4:.7f}".format(
                 epoch + 1, train_steps, train_loss, vali_loss, test_loss))
             early_stopping(vali_loss, self.model, path)
@@ -359,7 +367,13 @@ class Exp_Main(Exp_Basic):
 
                 vali_loss = self.vali(vali_data, vali_loader, criterion)
                 test_loss = self.vali(test_data, test_loader, criterion)
-                
+                # wandb
+                # wandb.log({
+                #     "epoch": epoch,
+                #     "train_loss": train_loss,
+                #     "val_loss": vali_loss,
+                #     "test_loss": test_loss,
+                # })
                 avg_train_loss = np.average(train_loss)
                 avg_intervention_loss = np.average(intervention_loss) if intervention_loss else 0
                 avg_consistency_loss = np.average(consistency_loss) if consistency_loss else 0

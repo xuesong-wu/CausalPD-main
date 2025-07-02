@@ -1,0 +1,20 @@
+wandb_version: 1
+
+batch_size:
+  value: 1
+d_ff:
+  value: 256
+d_model:
+  value: 128
+dropout:
+  value: 0.1
+e_layers:
+  value: 3
+fc_dropout:
+  value: 0.3
+head_dropout:
+  value: 0.1
+learning_rate:
+  value: 0.0005
+n_heads:
+  value: 2

@@ -64,6 +64,23 @@
 
 - For more options, see the arguments in `run_Exp.py`.
 
+### 3. One-click training for each dataset
+
+- You can use the provided shell scripts in the `scripts/` directory to quickly start training for each dataset:
+
+  ```bash
+  # Train on GridSZ dataset
+  bash scripts/GridSZ.sh
+
+  # Train on SegmentSZ dataset
+  bash scripts/SegmentSZ.sh
+
+  # Train on Shanghai dataset
+  bash scripts/Shanghai.sh
+  ```
+
+- Each script contains recommended parameters for the corresponding dataset. You can modify the scripts to adjust hyperparameters as needed.
+
 ---
 
 ## Project Structure
