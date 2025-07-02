@@ -1,4 +1,4 @@
-# CausalPD_main
+# CausalPD-main
 
 > **Joint Causal Discovery and Intervention for Large-Scale Pavement Distress Distribution Data**
 
@@ -19,7 +19,7 @@
 
 ## Introduction
 
-**CausalPD_main** is a deep learning framework for joint causal discovery and intervention on large-scale pavement distress distribution data. It provides tools for data loading, model training, evaluation, and visualization, aiming to facilitate research in spatio-temporal causal inference and pavement management.
+**CausalPD-main** is a deep learning framework for joint causal discovery and intervention on large-scale pavement distress distribution data. It provides tools for data loading, model training, evaluation, and visualization, aiming to facilitate research in spatio-temporal causal inference and pavement management.
 
 
 ---
@@ -28,8 +28,8 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/xuesong-wu/CausalPD_main.git
-   cd CausalPD_main
+   git clone https://github.com/xuesong-wu/CausalPD-main.git
+   cd CausalPD-main
    ```
 
 2. **Install dependencies:**
@@ -76,7 +76,7 @@
 ## Project Structure
 
 ```
-CausalPD_main/
+CausalPD-main/
 │
 ├── data/                # Datasets (not included, see Data Preparation)
 ├── data_provider/       # Data loading and preprocessing
