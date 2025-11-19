@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
     # data loader
     parser.add_argument('--data', type=str, default='train', help='dataset type')
-    parser.add_argument('--root_path', type=str, default='./data/Shanghai/', help='root path of the data file, options: [GridSZ, SegmentSZ, Shanghai]')
+    parser.add_argument('--root_path', type=str, default='./data/GridSZ/', help='root path of the data file, options: [GridSZ, SegmentSZ, Shanghai]')
     parser.add_argument('--data_path', type=str, default='pavement_distress.npy', help='data file')
     parser.add_argument('--ext_path', type=str, default='ext.csv', help='data file')
     parser.add_argument('--meta_dim', type=int, default=0, help='dimension of static spatial features, set to 0 to disable static feature loading')
